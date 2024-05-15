@@ -1,0 +1,9 @@
+steps:
+  - label: "Cloning Repo"
+    command: git clone git@github.com:Argus-Labs/starter-game-template.git shard
+    key: clone repo
+
+  - label: "Docker Build"
+    command: cd shard; docker build cardinal
+    key: docker build
+    depends_on: clone repo
